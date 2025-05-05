@@ -12,6 +12,10 @@ const PORT = process.env.PORT || 5000;
 // Conectar a la base de datos
 connectDB();
 
+app.get('/', (req, res) => {
+  res.send('¡Hola desde la raíz de la API!');
+});
+
 // Middleware
 app.use(cors());
 app.use(express.json()); // Para analizar el cuerpo de las peticiones JSON

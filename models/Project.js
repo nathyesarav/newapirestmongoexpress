@@ -11,6 +11,8 @@ const ProjectSchema = new mongoose.Schema({
   destacado: { type: Boolean, default: false },
   imagen_principal: { type: String },
   // Puedes agregar más campos aquí según tu modelo de datos
+},{
+  collection: 'proyectos'
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);
